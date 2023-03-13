@@ -1,5 +1,9 @@
 <h1>Dima`s Portfolio</h1>
 
+{% load static %}
+
+<img src="{% static '/portfolio/Python-Chajnik.jpg' %}">
+
 {% for project in projects %}
 
 <h2>{{ project.title }}</h2>
