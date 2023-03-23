@@ -1,8 +1,14 @@
 <h1>Dima`s Portfolio</h1>
 
 {% load static %}
+
+<a href="{% url 'blog:blog' %}">Blog</a>
+<br>
 <a href="{% static '/portfolio/LicenseCertificate-R3101719.pdf' %}">License</a>
+<br>
 <img src="{% static '/portfolio/Python-Chajnik.jpg' %}">
+<br>
+
 
 {% for project in projects %}
 

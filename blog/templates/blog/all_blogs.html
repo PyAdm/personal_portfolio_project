@@ -1,11 +1,13 @@
 <h1>Blog</h1>
-<h2>Dima was written 3 blogs</h2>
-<br>
+
+<h2>Dima has written {{ posts.count }} post{{ posts.count|pluralize }}</h2>
 
 {% for post in posts %}
 
-<a href="{% url 'blog:detail' post.id  %}"><h2>{{ post.title }}</h2></a>
-<p>{{ post.description }}</p>
-<p>{{ post.date }}</p>
+<a href="{% url 'blog:detail' post.id  %}">
+    <h2>{{ post.title }}</h2>
+</a>
+<p>{{ post.description|striptags|truncatechars:100 }}</p>
+<p>{{ post.date|date:'M d' }}</p>
 
 {% endfor %}
