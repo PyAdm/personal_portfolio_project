@@ -2,16 +2,12 @@
 
 {% block content %}
 
-<h1>Dima`s Portfolio</h1>
-
 {% load static %}
 
-<a href="{% url 'blog:blog' %}">Blog</a>
-<br>
-<a href="{% static '/portfolio/LicenseCertificate-R3101719.pdf' %}">License</a>
-<br>
-<img src="{% static '/portfolio/Python-Chajnik.jpg' %}">
-<br>
+<div class="home-animal">
+    <img src="media\portfolio\images\Main.jpg" alt="Main" width="600px">
+    <h1>Our likely animals</h1>
+</div>
 
 
 {% for project in projects %}
